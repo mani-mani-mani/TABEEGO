@@ -1,0 +1,41 @@
+/* common */
+body {
+    margin: 0px 0px;
+}
+
+/* header */
+header {
+    background-color: #ffc957;
+}
+
+header h1, header p{
+    margin-top: 0px;  
+    padding-left: 15px;
+    padding-top: 0px;
+}
+
+header h1{
+    padding-top: 3px;
+}
+
+nav, nav div {
+    border-color: #ffc957;
+}
+
+.navbar{
+    margin-bottom: 0px;
+}
+
+/* footer */
+footer {
+    background-color: #ffc957;
+    padding: 8px 0px;
+}
+
+footer div {
+    text-align: center;
+}
+
+footer p {
+    margin: 16px 0px;
+}
