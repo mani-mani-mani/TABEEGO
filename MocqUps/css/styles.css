@@ -8,6 +8,10 @@ a:hover {
 }
 
 /* header */
+header img {
+    margin-top: 5px;
+    margin-right: 5px;
+}
 header {
     background-color: #ffc957;
 }
