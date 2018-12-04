@@ -8,26 +8,39 @@ a:hover {
 }
 
 /* header */
-header img {
-    margin-top: 5px;
-    margin-right: 5px;
-}
 header {
     background-color: #ffc957;
 }
 
-header h1, header p{
-    margin-top: 0px;  
-    padding-left: 15px;
-    padding-top: 0px;
+.header-container{
+ position: relative;
 }
 
-header h1{
-    padding-top: 8px;
+.header_right{
+    position: absolute;
+    right: 0;
+    padding-right: 15px;
 }
 
-header p{
-    margin-bottom: 3px;
+.header_left{
+    position: absolute;
+    left: 0;
+    padding-left: 90px;
+}
+
+header img {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+#name1 {
+    font-size: 38px;
+}
+
+#sign_up {
+    border: 2px solid white;
+    border-radius: 4px; 
+    margin-right: 16px;
 }
 
 /* global navigation */
@@ -37,7 +50,7 @@ header p{
 
 #gNav ul {
     display: flex;
-    padding: 3px 0px 0px 0px;
+    padding: 5px 0px 0px 0px;
     margin-bottom: 0px;
 }
 
