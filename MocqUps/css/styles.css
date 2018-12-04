@@ -3,6 +3,10 @@ body {
     margin: 0px 0px;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 /* header */
 header {
     background-color: #ffc957;
@@ -56,19 +60,6 @@ header p{
 
 #gNav a:hover {
     color: black;
-    text-decoration: none;
-}
-
-#gNav a span:hover {
-    color: black;
-    text-decoration: none;
-}
-
-#gNav a span {
-    color: white;
-    display:  block;
-    font-family: arial;
-    font-size: 15Spx;
 }
 
 #gNav .current-menu-item a, #gNav .current-menu-item a span {
