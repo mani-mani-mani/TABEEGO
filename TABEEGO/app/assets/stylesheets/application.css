@@ -1,15 +1,99 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/* common */
+body {
+    margin: 0px 0px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* header */
+header {
+    background-color: #ffc957;
+}
+
+.header-container{
+ position: relative;
+}
+
+.header_right{
+    position: absolute;
+    right: 0;
+    padding-right: 15px;
+}
+
+.header_left{
+    position: absolute;
+    left: 0;
+    padding-left: 90px;
+}
+
+header img {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+#name1 {
+    font-size: 38px;
+}
+
+#sign_up {
+    border: 2px solid white;
+    border-radius: 4px; 
+    margin-right: 16px;
+}
+
+/* global navigation */
+#gNav {
+    margin-bottom: 0px;
+}
+
+#gNav ul {
+    display: flex;
+    padding: 5px 0px 0px 0px;
+    margin-bottom: 0px;
+}
+
+#gNav li {
+    /* border-top: 1px solid white; */
+    /* border-left: 1px solid white; */
+    /* border-bottom: 1px solid white; */
+    height: 45px;
+    text-align: center;
+    width:25%;
+}
+
+/* #gNav li:last-child {
+    border-right: 1px solid white;
+} */
+
+#gNav a {
+    color: white;
+    display:  block;
+    font-size: 16px;
+    height: 100%;
+    line-height: 280%;
+}
+
+#gNav a:hover {
+    color: black;
+}
+
+#gNav .current-menu-item a, #gNav .current-menu-item a span {
+    background-color: white;
+    color:#ffc957;
+}
+
+/* footer */
+footer {
+    background-color: #ffc957;
+    padding: 8px 0px;
+}
+
+footer div {
+    text-align: center;
+}
+
+footer p {
+    margin: 16px 0px;
+}
