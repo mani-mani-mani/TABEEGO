@@ -13,24 +13,15 @@ header {
 }
 
 .header-container{
-    position: relative;
+ position: relative;
 }
 
 .header_right{
     position: absolute;
-    right: 5%;
-    top: 40%;
+    right: 0;
     padding-right: 15px;
 }
 
-.header_right a{
-    font-size: 150%;
-    color: white;
-}
-
-.header_right a:hover{
-    color: black;
-}
 .header_left{
     position: absolute;
     left: 0;
@@ -93,23 +84,6 @@ header img {
     color:#ffc957;
 }
 
-/* body */
-.img-text {
-    position:relative;
-}
-
-.slogan {
-    position: absolute;
-    top:20px;
-    right: 10%;
-    border: solid 1px #000000;
-    font-size: 800%;
-}
-
-.slogan p{
-    margin: 0;
-    padding: 0;
-}
 /* footer */
 footer {
     background-color: #ffc957;
