@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   get "area/index"
   get "profile/index"
   get "questions/index"
+
 end
 
