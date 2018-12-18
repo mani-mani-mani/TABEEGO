@@ -7,6 +7,8 @@ a:hover {
     text-decoration: none;
 }
 
+
+
 /* header */
 header {
     background-color: #ffc957;
@@ -93,7 +95,21 @@ header img {
     color:#ffc957;
 }
 
-/* body */
+/* footer */
+footer {
+    background-color: #ffc957;
+    padding: 8px 0px;
+}
+
+footer div {
+    text-align: center;
+}
+
+footer p {
+    margin: 16px 0px;
+}
+
+/* index */
 .img-text {
     position:relative;
 }
@@ -110,16 +126,14 @@ header img {
     margin: 0;
     padding: 0;
 }
-/* footer */
-footer {
-    background-color: #ffc957;
-    padding: 8px 0px;
+
+/* 404error */
+.error {
+    background-color: #bec3c7;
 }
 
-footer div {
-    text-align: center;
+.error  img {
+    display: block;
+    margin: 0 auto;
 }
 
-footer p {
-    margin: 16px 0px;
-}
