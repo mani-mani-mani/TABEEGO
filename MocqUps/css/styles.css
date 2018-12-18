@@ -127,6 +127,15 @@ footer p {
     padding: 0;
 }
 
+#WorldMap, #search_by_words {
+text-align: center;
+}
+
+#WorldMap img {
+    display: block;
+    margin: 0 auto;
+}
+
 /* 404error */
 .error {
     background-color: #bec3c7;

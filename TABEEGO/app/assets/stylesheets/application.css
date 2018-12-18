@@ -7,30 +7,42 @@ a:hover {
     text-decoration: none;
 }
 
+
+
 /* header */
 header {
     background-color: #ffc957;
 }
 
 .header-container{
- position: relative;
+    position: relative;
 }
 
 .header_right{
     position: absolute;
-    right: 0;
+    right: 5%;
+    top: 40%;
     padding-right: 15px;
 }
 
-.header_left{
-    position: absolute;
-    left: 0;
-    padding-left: 90px;
+.header_right a{
+    font-size: 150%;
+    color: white;
+}
+
+.header_right a:hover{
+    color: black;
 }
 
 header img {
     margin-top: 5px;
     margin-right: 5px;
+    float:left;
+}
+
+.header_left{
+    left: 0;
+    padding-left: 90px;
 }
 
 #name1 {
@@ -97,3 +109,41 @@ footer div {
 footer p {
     margin: 16px 0px;
 }
+
+/* index */
+.img-text {
+    position:relative;
+}
+
+.slogan {
+    position: absolute;
+    top:20px;
+    right: 10%;
+    border: solid 1px #000000;
+    font-size: 800%;
+}
+
+.slogan p{
+    margin: 0;
+    padding: 0;
+}
+
+#WorldMap, #search_by_words {
+text-align: center;
+}
+
+#WorldMap img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* 404error */
+.error {
+    background-color: #bec3c7;
+}
+
+.error  img {
+    display: block;
+    margin: 0 auto;
+}
+
