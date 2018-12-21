@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get "/profile", to: "profile#index"
 
   # 質問
-  get "/questions/index"
-  post "/questions/index", to: "comments#create"
+  get "/questions/:question_id", to: "questions#index"
+  post "/questions/:question_id", to: "comments#create"
 end
 

@@ -1,6 +1,9 @@
 class QuestionsController < ApplicationController
     def index
+        question_id = params[:question_id]
+        @question = Question.find(question_id)
+
         @comment = Comment.new
-        @comments = Comment.all
+        @comment_all = Comment.where(question_id: question_id)
     end
 end

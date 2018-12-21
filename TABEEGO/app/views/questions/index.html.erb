@@ -2,12 +2,13 @@
 <div style="border:solid 10px;margin:20px">
     <div></div>
     <div>
-        <p>この国はどんな感じですか</p>
+        <p><%= @question.title%></p>
+        <p><%= @question.detail%></p>
     </div>
 </div>
 
 <!-- コメント -->
-<% @comments.each do |c|%>
+<% @comment_all.each do |c|%>
 <div style="border:solid 1px;margin:20px">
     <div>
         <p><%= c.title %></p>
