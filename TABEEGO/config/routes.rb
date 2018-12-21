@@ -10,5 +10,9 @@ Rails.application.routes.draw do
   post "/register", to:"top#register_user"
 
   get "/profile", to: "profile#index"
+
+  # 質問
+  get "/questions/index"
+  post "/questions/index", to: "comments#create"
 end
 

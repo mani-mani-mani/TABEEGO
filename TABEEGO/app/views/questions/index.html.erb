@@ -1,0 +1,36 @@
+<!-- 質問 -->
+<div style="border:solid 10px;margin:20px">
+    <div></div>
+    <div>
+        <p>この国はどんな感じですか</p>
+    </div>
+</div>
+
+<!-- コメント -->
+<% @comments.each do |c|%>
+<div style="border:solid 1px;margin:20px">
+    <div>
+        <p><%= c.title %></p>
+        <p><%= c.detail %></p>
+    </div>
+</div>
+<% end %>
+
+<!-- コメント追加-->
+<div style="border:double 10px;margin:20px;">
+    <%= form_for @comment, :method => :post, :url => {:controller => :comments, :action => :create} do |c| %>
+    <div>
+        <%= c.label :title, "タイトル" %>
+        <%= c.text_field :title %>
+    </div>
+    <div>
+        <%= c.label :detail, "詳細" %>
+        <%= c.text_field :detail %>
+    </div>
+        <%= c.hidden_field :user_id, :value => 2 %>
+        <%= c.hidden_field :question_id, :value => 1 %>
+    <div>
+        <%= c.submit "送信" %>
+    </div>
+    <% end %>
+</div>
