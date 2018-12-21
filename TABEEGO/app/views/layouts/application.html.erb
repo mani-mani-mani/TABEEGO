@@ -21,15 +21,15 @@
     <!----- ヘッダー ----->
 <header>
     <div class="container-fluid header-container">
-        <%= image_tag("icon_white", :style => "width:70px; height:70px; text-align:left") %>
+        <a href="/"><%= image_tag("icon_white", :style => "width:70px; height:70px; text-align:left") %></a>
         <div class = "header_left">
-                <div id="name1">TABEEGO</div>
-                <div id="name2">旅行者が作る情報共有サービス</div>                    
+        <a href="/"><div id="name1">TABEEGO</div></a>    
+        <a href="/"><div id="name2">旅行者が作る情報共有サービス</div></a>                    
         </div>
 
         <div class = "header_right">
-                    <a id="sign_up">Sign up</a>
-                    <a id="log_in">Log in</a>                    
+                    <a id="sign_up" href="/register">Sign up</a>
+                    <a id="log_in" href="login">Log in</a>                    
         </div>
     </div>
 
