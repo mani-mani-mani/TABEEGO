@@ -11,8 +11,11 @@ Rails.application.routes.draw do
 
   get "/profile", to: "profile#index"
 
+  #地域遷移
+  get "/area", to: "area#index"
+  get "/asia", to: "area#asia"
+
   # 質問
   get "/questions/:question_id", to: "questions#index"
   post "/questions/:question_id", to: "comments#create"
 end
-
