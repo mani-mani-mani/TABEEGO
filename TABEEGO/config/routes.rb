@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   #地域遷移
   get "/area", to: "area#index"
-  get "/asia", to: "area#asia"
+  get "/area/:area_id", to: "area#asia"
 
   # 質問
   get "/questions/:question_id", to: "questions#index"

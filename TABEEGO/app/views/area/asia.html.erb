@@ -1,3 +1,4 @@
-<%= image_tag("area/Asia/index.jpeg", :width => "100%") %>
+<% area_name = params[:area_id] %>
+<%= image_tag("area/" + area_name + "/index.jpeg", :width => "100%") %>
 
-<h3>アジア</h3>
+<h3><%= area_name %></h3>
