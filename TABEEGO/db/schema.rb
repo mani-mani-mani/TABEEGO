@@ -10,21 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181221083009) do
+ActiveRecord::Schema.define(version: 20181227092645) do
 
   create_table "areas", force: :cascade do |t|
     t.string "name"
-    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name_jp"
   end
 
   create_table "cities", force: :cascade do |t|
     t.string "name"
-    t.string "image"
     t.integer "country_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name_jp"
     t.index ["country_id"], name: "index_cities_on_country_id"
   end
 
@@ -41,10 +41,10 @@ ActiveRecord::Schema.define(version: 20181221083009) do
 
   create_table "countries", force: :cascade do |t|
     t.string "name"
-    t.string "image"
     t.integer "area_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name_jp"
     t.index ["area_id"], name: "index_countries_on_area_id"
   end
 
