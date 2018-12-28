@@ -3,7 +3,7 @@ class AreaController < ApplicationController
     end
 
     def area
-        @area_all = Area.All
+        @area_all = Area.all
         @area = params[:area]
     end
 
