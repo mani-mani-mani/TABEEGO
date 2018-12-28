@@ -10,7 +10,7 @@ require "csv"
 
 # Areaデータの読み込み
 CSV.foreach('db/area.csv') do |row|
-    Country.create(:name => row[0], :name_jp => row[1])
+    Area.create(:name => row[0], :name_jp => row[1])
 end
 
 # Countryデータの読み込み
