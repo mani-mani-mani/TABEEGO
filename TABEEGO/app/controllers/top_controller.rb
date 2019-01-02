@@ -1,4 +1,5 @@
 class TopController < ApplicationController
+    skip_before_action :require_login
     def index
     end
 
@@ -16,9 +17,13 @@ class TopController < ApplicationController
         user = User.new
         user.name = username
         user.password = password
-        user.save
 
-        redirect_to "/login"
+        if user.save
+            log_in(user)
+            redirect_to "/area"
+        else
+            flash[:error_message] = "Faied to register"
+        end
     end
 
     def login
@@ -28,18 +33,19 @@ class TopController < ApplicationController
         username = params[:username]
         password = params[:password]
 
-        users = User.where("name = ? and password = ?", username, password)
-        user = users[0];
+        user = User.find_by(name: username, password: password)
 
         if user
-            session[:id] = user.id;
-            redirect_to "/"
+            log_in(user)
+            redirect_to "/area"
         else
             redirect_to "/login", flash:{ error_message: "ユーザー名かパスワードが間違っています。"}
         end
 
     end
-    
+
     def logout
+        log_out
+        redirect_to "/"
     end
 end

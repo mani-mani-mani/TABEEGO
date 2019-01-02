@@ -1,5 +1,9 @@
 <h1>ユーザー登録</h1>
 
+<% if flash[:error_message] %>
+    <div><%= flash[:error_message] %></div>
+<% end %>
+
 <%= form_tag("/register", method: :post) do %>
     <%= label_tag "ユーザー名" %>
     <%= text_field_tag :username %> </br>

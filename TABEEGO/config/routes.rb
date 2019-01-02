@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get "/login", to: "top#login"
   post "/login", to:"top#login_check"
+  get "/logout", to: "top#logout"
 
   get "/register", to:"top#register"
   post "/register", to:"top#register_user"
