@@ -1,9 +1,16 @@
 <h3>地域遷移</h3>
-<ul style="list-style:none">
-<li>アジア</li>
-<li>ヨーロッパ</li>
-<li>北アメリカ</li>
-<li>南アメリカ</li>
-<li>オセアニア</li>
-<li>アフリカ</li>
-</ul>
+
+<% @area.each do |area, map| %>
+    <div class = "list">
+        <ul style= "color:blue">
+            <h2><%= @japanize[area] %></h2>
+            <% map.each do |country, city|%>
+            <li style = "color:red">
+                <h3><%= @japanize[country] %></h3>
+                <h3><%=  %></h3>
+                <%= link_to @japanize[city], {controller: :questions, area: area, country: country, city: city}%>
+            </li>
+            <% end %>
+        </ul>
+    </div>
+<% end %>

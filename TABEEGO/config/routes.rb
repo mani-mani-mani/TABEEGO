@@ -13,11 +13,12 @@ Rails.application.routes.draw do
 
   # 地域遷移
   get "/area", to: "area#index"
-  get "/area/:area", to: "area#area"
-  get "/area/:area/:country", to: "area#country"
-  get "/area/:area/:country/:city", to: "area#city"
 
   # 質問
-  get "/area/:area/:country/:city/questions/:question_id", to: "questions#index"
-  post "/area/:area/:country/:city/questions/:question_id", to: "comments#create"
+  get "/area/:area/:country/:city", to: "questions#index"
+  post "/area/:area/:country/:city/", to: "questions#create"
+
+  # コメント
+  get "/area/:area/:country/:city/:question_id", to: "questions#detail"
+  post "/area/:area/:country/:city/:question_id", to: "comments#create"
 end

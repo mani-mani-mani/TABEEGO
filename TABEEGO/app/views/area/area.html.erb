@@ -1,4 +1,7 @@
-<% area_name = params[:area] %>
-<%= image_tag("area/" + area_name + "/index.jpeg", :width => "100%") %>
+<h3><%= params[:area] %></h3>
+<%= image_tag("area/#{params[:area]}/index.jpg", :width => "100%") %>
 
-<h3><%= area_name %></h3>
+<% @city_all.each %>
+<div style = "border:1px solid">
+</div>
+<% end %>

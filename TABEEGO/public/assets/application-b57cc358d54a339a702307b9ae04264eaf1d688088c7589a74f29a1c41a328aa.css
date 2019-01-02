@@ -1,0 +1,155 @@
+/* common */
+
+body {
+    margin: 0px 0px;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* header */
+header {
+    background-color: #ffc957;
+}
+
+.header-container{
+    position: relative;
+}
+
+.header_right{
+    position: absolute;
+    right: 5%;
+    top: 40%;
+    padding-right: 15px;
+}
+
+.header_right a{
+    font-size: 150%;
+    color: white;
+}
+
+.header_right a:hover{
+    color: black;
+}
+
+header img {
+    margin-top: 5px;
+    margin-right: 5px;
+    float:left;
+}
+
+.header_left{
+    left: 0;
+    padding-left: 90px;
+}
+
+#name1 {
+    font-size: 38px;
+}
+
+#sign_up {
+    border: 2px solid white;
+    border-radius: 4px; 
+    margin-right: 16px;
+}
+
+/* global navigation */
+#gNav {
+    margin-bottom: 0px;
+}
+
+#gNav ul {
+    display: flex;
+    padding: 5px 0px 0px 0px;
+    margin-bottom: 0px;
+}
+
+#gNav li {
+    /* border-top: 1px solid white; */
+    /* border-left: 1px solid white; */
+    /* border-bottom: 1px solid white; */
+    height: 45px;
+    text-align: center;
+    width:25%;
+}
+
+/* #gNav li:last-child {
+    border-right: 1px solid white;
+} */
+
+#gNav a {
+    color: white;
+    display:  block;
+    font-size: 16px;
+    height: 100%;
+    line-height: 280%;
+}
+
+#gNav a:hover {
+    color: black;
+}
+
+#gNav .current-menu-item a, #gNav .current-menu-item a span {
+    background-color: white;
+    color:#ffc957;
+}
+
+/* footer */
+footer {
+    background-color: #ffc957;
+    padding: 8px 0px;
+}
+
+footer div {
+    text-align: center;
+}
+
+footer p {
+    margin: 16px 0px;
+}
+
+/* index */
+.img-text {
+    position:relative;
+}
+
+.slogan {
+    position: absolute;
+    top:20px;
+    right: 10%;
+    border: solid 1px #000000;
+    font-size: 800%;
+}
+
+.slogan p{
+    margin: 0;
+    padding: 0;
+}
+
+#WorldMap, #search_by_words {
+text-align: center;
+}
+
+#WorldMap img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* 404error */
+.error {
+    background-color: #bec3c7;
+}
+
+.error  img {
+    display: block;
+    margin: 0 auto;
+}
+
