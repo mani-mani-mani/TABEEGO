@@ -1,3 +1,7 @@
+<% if flash[:error_message] %>
+    <div><%= flash[:error_message] %></div>
+<% end %>
+
 <div class="img-text">
     <div><%= image_tag('yellow_suitcase.jpeg', :style => "width:100%") %></div>
     <div class="slogan">

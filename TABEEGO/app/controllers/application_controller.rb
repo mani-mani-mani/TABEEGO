@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   private
   def require_login
     unless logged_in? then
+      flash[:error_message] = "ログインしてください"
       redirect_to "/"
     end
   end

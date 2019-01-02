@@ -46,6 +46,7 @@ class TopController < ApplicationController
 
     def logout
         log_out
+        flash[:error_message] = "ログアウトしました。"
         redirect_to "/"
     end
 end
