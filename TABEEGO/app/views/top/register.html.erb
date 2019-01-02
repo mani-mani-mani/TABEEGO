@@ -1,13 +1,17 @@
-<h1>ユーザー登録</h1>
+<body>
+    <div class = "signup-wrapper">
+        <div class ="register">
+            <h2 class="register__header">ユーザー登録</h2>
 
-<% if flash[:error_message] %>
-    <div><%= flash[:error_message] %></div>
-<% end %>
+            <% if flash[:error_message] %>
+                <div><%= flash[:error_message] %></div>
+            <% end %>
 
-<%= form_tag("/register", method: :post) do %>
-    <%= label_tag "ユーザー名" %>
-    <%= text_field_tag :username %> </br>
-    <%= label_tag "パスワード" %>
-    <%= password_field_tag :password%></br>
-    <%= submit_tag "送信" %>
-<% end %>
+            <%= form_tag("/register", method: :post) do %>
+                <%= text_field_tag :username, '', class: "register__input", placeholder: "ユーザー名" %> </br>
+                <%= password_field_tag :password, '', class: "register__input", placeholder: "パスワード" %></br>
+                <%= submit_tag "登録", class: "register__button", onClick: "OnRegister()" %>
+            <% end %>
+        </div>
+    </div>
+</body>

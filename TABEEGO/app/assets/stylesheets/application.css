@@ -101,17 +101,48 @@ header img {
     color:#ffc957;
 }
 
+/* register */
+.signup-wrapper{
+    border: solid 1px #000000;
+    border-radius: 10px;
+    margin: 20px 51px;
+    background-color: #ffffff;
+    max-width: 835px;
+    width: auto;
+}
+.register{
+    margin: 40px auto 60px;
+    width: 585px;
+    line-height: 24px;
+    font-size: 14px;
+}
+.register__input{
+    width: 97%;
+    margin-bottom:1rem;
+}
+.register__button{
+    color:white;
+    background-color: #ffc957;
+    box-shadow: none;
+    border-radius: 10px;
+    font-size:14px;
+    font-weight: bold;
+    line-height: 20px;
+    padding:6px 16px;
+
+    border-width: 0px;
+    border-style: outset;
+    border-color: buttonface;
+}
+
 /* footer */
 footer {
     background-color: #ffc957;
     padding: 8px 0px;
-}
-
-footer div {
     text-align: center;
 }
 
-footer p {
+footer .container-fluid p {
     margin: 16px 0px;
 }
 

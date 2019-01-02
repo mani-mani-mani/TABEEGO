@@ -18,11 +18,14 @@ class TopController < ApplicationController
         user.name = username
         user.password = password
 
-        if user.save
+        # TODO: バリデーションに変える
+        if username.empty? || password.empty?
+            flash[:error_message] = "Faied to register"
+            render "register"
+        else
+            user.save
             log_in(user)
             redirect_to "/area"
-        else
-            flash[:error_message] = "Faied to register"
         end
     end
 

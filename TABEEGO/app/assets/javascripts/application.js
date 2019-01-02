@@ -13,3 +13,7 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+function OnRegister() {
+    var res = confirm("この情報で登録します。");
+}
