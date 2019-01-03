@@ -169,7 +169,7 @@ footer .container-fluid p {
     top:20px;
     right: 10%;
     border: solid 1px #000000;
-    font-size: 800%;
+    font-size: 8vw;
 }
 
 .slogan p{
@@ -177,7 +177,7 @@ footer .container-fluid p {
     padding: 0;
 }
 
-#WorldMap, #search_by_words, #about {
+#WorldMap, #search_by_words, #about, #PickUp {
 text-align: center;
 }
 
