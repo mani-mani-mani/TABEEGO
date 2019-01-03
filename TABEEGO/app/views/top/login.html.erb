@@ -8,7 +8,7 @@
 
             <%= form_tag("/login", method: :post) do %>
                 <%= text_field_tag :username , '', class: "auth__input",  placeholder: "ユーザー名" %> </br>
-                <%= password_field_tag :password , '', class: "auth__input",  placeholder: "ユーザー名" %></br>
+                <%= password_field_tag :password , '', class: "auth__input",  placeholder: "パスワード" %></br>
                 <%= submit_tag "送信"  , class: "auth__button"%>
             <% end %>
         </div>
