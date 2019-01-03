@@ -1,13 +1,16 @@
-<h1>ユーザーログイン</h1>
+<body>
+    <div class = "auth-wrapper">
+        <div class = "auth">
+            <h2 class = "auth__title">TABEEGOにログイン</h2>
+            <% if flash[:error_message] %>
+                <div><%= flash[:error_message] %></div>
+            <% end %>
 
-<% if flash[:error_message] %>
-    <div><%= flash[:error_message] %></div>
-<% end %>
-
-<%= form_tag("/login", method: :post) do %>
-    <%= label_tag "ユーザー名" %>
-    <%= text_field_tag :username %> </br>
-    <%= label_tag "パスワード" %>
-    <%= password_field_tag :password%></br>
-    <%= submit_tag "送信" %>
-<% end %>
+            <%= form_tag("/login", method: :post) do %>
+                <%= text_field_tag :username , '', class: "auth__input",  placeholder: "ユーザー名" %> </br>
+                <%= password_field_tag :password , '', class: "auth__input",  placeholder: "ユーザー名" %></br>
+                <%= submit_tag "送信"  , class: "auth__button"%>
+            <% end %>
+        </div>
+    </div>
+</body>

@@ -1,6 +1,9 @@
 /* common */
 body {
     margin: 0px 0px;
+    background-color: #f9f9f9;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", Arial, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+    font-size: 16px;
 }
 
 a {
@@ -63,6 +66,7 @@ header img {
 /* global navigation */
 #gNav {
     margin-bottom: 0px;
+    box-shadow:0 1px 1px rgba(0,0,0,.1)
 }
 
 #gNav ul {
@@ -102,34 +106,42 @@ header img {
 }
 
 /* register */
-.signup-wrapper{
-    border: solid 1px #000000;
-    border-radius: 10px;
-    margin: 20px 51px;
+
+.auth-wrapper{
+    margin: 20px auto 40px;
+    width:66%;
+    padding:6rem 2rem;
+    text-align: center;
     background-color: #ffffff;
-    max-width: 835px;
-    width: auto;
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
 }
-.register{
-    margin: 40px auto 60px;
+.auth{
+    margin: 0px auto 40px;
+    border-radius: .25rem;
     width: 585px;
-    line-height: 24px;
-    font-size: 14px;
+    line-height: normal;
+    font-size: 20px;
 }
-.register__input{
+
+.auth__title{
+    margin-bottom:2rem;
+    font-weight: bold;
+}
+
+.auth__input{
     width: 97%;
+    padding:5px;
     margin-bottom:1rem;
 }
-.register__button{
+.auth__button{
     color:white;
     background-color: #ffc957;
-    box-shadow: none;
-    border-radius: 10px;
-    font-size:14px;
     font-weight: bold;
-    line-height: 20px;
-    padding:6px 16px;
+    width: 97%;
+    padding: 10px;
 
+    box-shadow: none;
+    border-radius: 4px;
     border-width: 0px;
     border-style: outset;
     border-color: buttonface;
@@ -140,6 +152,7 @@ footer {
     background-color: #ffc957;
     padding: 8px 0px;
     text-align: center;
+    border-top:1px solid #e8e8e8;
 }
 
 footer .container-fluid p {
