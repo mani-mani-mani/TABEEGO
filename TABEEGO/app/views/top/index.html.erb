@@ -2,6 +2,8 @@
     <div><%= flash[:error_message] %></div>
 <% end %>
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
 <div class="img-text">
     <%= image_tag('yellow_suitcase.jpeg', :style => "width:100%") %>
     <div class="slogan">
@@ -12,33 +14,56 @@
 </div>
 
 <div id="about">
-    <div class="container-fluid">
+    <div>
+        <h1 class="page-header">TABEEGO</h1>
+    </div>
+    <div>
         <div>
-            <h1 class="page-header">TABEEGO</h1>
             <h3>次の休みは、あの国へ行きたい。</br>でも現地事情が分からない...</h3>
+            <br>
         </div>
-        <div style="margin-top:40px">
+        <div>
             <h3>TABEEGOは、そんな旅行好きのための</br>掲示板情報共有サービスです。</h3>
+            <br>
         </div>
     </div>
 </div>
 
 <div id="search_by_words">
-    <div class="container-fluid">
-
+    <h2>掲示板を検索する</h2>
+    <div class="container">
+        <br/>
+        <div class="row justify-content-center">
+                            <div class="col-12 col-md-10 col-lg-8">
+                                <form class="card card-sm">
+                                    <div class="card-body row no-gutters align-items-center">
+                                        <div class="col-auto">
+                                            <i class="fas fa-search h4 text-body"></i>
+                                        </div>
+                                        <!--end of col-->
+                                        <div class="col">
+                                            <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Search topics or keywords">
+                                        </div>
+                                        <!--end of col-->
+                                        <div class="col-auto">
+                                            <button class="btn btn-lg btn-success" type="submit">Search</button>
+                                        </div>
+                                        <!--end of col-->
+                                    </div>
+                                </form>
+                            </div>
+                            <!--end of col-->
+                        </div>
     </div>
 </div>
 
 <div id="WorldMap">
-    <h2 class="page-header"><a href = "/area/">地域を選ぶ</a></h2>
-    <%= image_tag('WorldMap.png', :style => "width:100%") %>
-    <div class="container-fluid">
+    <div>
+    <h2><a href = "/area/">地域を選ぶ</a></h2>
     </div>
+    <a href="/area/"><%= image_tag('WorldMap.png', :style => "width:100%") %></a>
 </div>
 
 <div id="PickUp">
-    <h3>Pick Up</h3>
-    <div class="container-fluid">
-
-    </div>
+    <h2>Pick Up</h2>
 </div>
