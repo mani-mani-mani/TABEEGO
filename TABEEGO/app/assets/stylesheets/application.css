@@ -15,7 +15,9 @@ a:hover {
     color: black;
 }
 
-
+h1, h2{
+    padding-bottom: 15px;
+}
 
 /* header */
 header {
@@ -179,11 +181,22 @@ footer .container-fluid p {
 
 #WorldMap, #search_by_words, #about, #PickUp {
 text-align: center;
+padding: 30px 0px;
 }
 
 #WorldMap img {
     display: block;
     margin: 0 auto;
+}
+
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
 }
 
 /* 404error */
@@ -196,3 +209,9 @@ text-align: center;
     margin: 0 auto;
 }
 
+/* Question */
+.question {
+    border: solid 1px #ffc957;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}

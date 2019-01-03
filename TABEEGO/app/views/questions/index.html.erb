@@ -1,8 +1,14 @@
 <div class = "container">
+    <br>
+    <p><%= params[:country]%> > <%= params[:city]%></p>
+    <h2>掲示板一覧</h2>
     <% @questions.each do |q| %>
-        <h1><%= q.title%></h1>
-
-        <span><%= link_to q.detail, {controller: :questions, action: :detail, area: params[:area], country: params[:country], city: params[:city], question_id: q.id} %></span>
+        <div style = "padding: 10px;" class = "question">
+            <p>Posted at <%= q.created_at%></p>
+            <h2><%= link_to q.title, {controller: :questions, action: :detail, area: params[:area], country: params[:country], city: params[:city], question_id: q.id} %></h2>
+            <span><%= link_to q.detail, {controller: :questions, action: :detail, area: params[:area], country: params[:country], city: params[:city], question_id: q.id} %>
+            <br><%= link_to "詳細", {controller: :questions, action: :detail, area: params[:area], country: params[:country], city: params[:city], question_id: q.id} %></span>        
+        </div>
     <% end %>
 
 <div style="border:double 10px;margin:20px;">
