@@ -21,12 +21,12 @@
 <div style="border:double 10px;margin:20px;">
     <%= form_for @add, :method => :post, :url => {controller: :comments, action: :create} do |c| %>
     <div>
-        <%= c.label :title, "タイトル" %>
-        <%= c.text_field :title %>
+        <%= c.label :title, "タイトル:" %></br>
+        <%= c.text_field :title, :size=>"150" %>
     </div>
     <div>
-        <%= c.label :detail, "詳細" %>
-        <%= c.text_field :detail %>
+        <%= c.label :detail, "詳細:" %></br>
+        <%= c.text_area :detail,  :size=>"150x10" %>
     </div>
         <%= c.hidden_field :user_id, :value => 2 %>
         <%= c.hidden_field :question_id, :value => 1 %>

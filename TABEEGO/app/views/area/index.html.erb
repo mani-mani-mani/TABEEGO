@@ -1,16 +1,40 @@
-<h3>地域遷移</h3>
+<div class="container">
+    <br>
+    <h3>地域遷移</h3>
 
-<% @area.each do |area, map| %>
-    <div class = "list">
-        <ul style= "color:blue">
-            <h2><%= @japanize[area] %></h2>
-            <% map.each do |country, city|%>
-            <li style = "color:red">
-                <h3><%= @japanize[country] %></h3>
-                <h3><%=  %></h3>
-                <%= link_to @japanize[city], {controller: :questions, area: area, country: country, city: city}%>
-            </li>
-            <% end %>
-        </ul>
-    </div>
-<% end %>
+    <% @area.each do |area, map| %>
+        <div class = "list">
+            <ul style= "color:blue">
+                <h2><%= @japanize[area] %></h2>
+                <% map.each do |country, city|%>
+                <li style = "color:red">
+                    <h3><%= @japanize[country] %></h3>
+                    <h3><%=  %></h3>
+                    <%= link_to @japanize[city], {controller: :questions, area: area, country: country, city: city}%>
+                </li>
+                <% end %>
+            </ul>
+        </div>
+        
+    <% end %>
+
+    <% @area.each do |area, map| %>
+    <h2><%= @japanize[area] %></h2>
+        <div class = "card-deck">
+                <% map.each do |country, city|%>
+                    <div class="card" style="">
+                    <%= image_tag("area/Asia/Taiwan.png", :width => "100%", :class => "card-img-top", :alt => "カード画像") %>
+                    <%# ↓こうやって各国の国旗を表示したいけどできないです...%>
+                    <%#= image_tag("area/#{area}/#{country}.png", :width => "100%", :class => "card-img-top", :alt => "カード画像") %>
+                        <div class="card-body">
+                            <h5 class="card-title"><%= @japanize[country] %></h5>
+                            <p class="card-text">Description</p>
+                            <%= link_to @japanize[city], {controller: :questions, area: area, country: country, city: city}%>
+                        </div>
+                    </div>
+                <% end %>
+        </div>
+        <br>
+    <% end %>
+
+</div>

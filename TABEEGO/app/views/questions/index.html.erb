@@ -1,23 +1,24 @@
-<% @questions.each do |q| %>
-    <h1><%= q.title%></h1>
+<div class = "container">
+    <% @questions.each do |q| %>
+        <h1><%= q.title%></h1>
 
-    <span><%= link_to q.detail, {controller: :questions, action: :detail, area: params[:area], country: params[:country], city: params[:city], question_id: q.id} %></span>
-<% end %>
-
+        <span><%= link_to q.detail, {controller: :questions, action: :detail, area: params[:area], country: params[:country], city: params[:city], question_id: q.id} %></span>
+    <% end %>
 
 <div style="border:double 10px;margin:20px;">
     <%= form_for @add, :method => :post, :url => {controller: :questions, action: :create, area: params[:area], country: params[:country], city: params[:city]} do |q|%>
         <div>
-            <%= q.label :title, "タイトル" %>
-            <%= q.text_field :title %>
+            <%= q.label :title, "タイトル:" %><br>
+            <%= q.text_field :title, :size=>"100%" %>
         </div>
         <div>
-            <%= q.label :detail, "詳細" %>
-            <%= q.text_field :detail %>
+            <%= q.label :detail, "詳細:" %><br>
+            <%= q.text_area :detail, :size=>"100%x10%" %>
         </div>
         <div>
             <%= q.submit "送信" %>
         </div>
 
     <% end%>
+</div>
 </div>
