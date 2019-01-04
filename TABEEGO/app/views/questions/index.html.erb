@@ -11,18 +11,19 @@
         </div>
     <% end %>
 
-<div style="border:double 10px;margin-bottom:20px;">
+<div class="card card-body question-card">
+    <legend>掲示板を作成</legend>
     <%= form_for @add, :method => :post, :url => {controller: :questions, action: :create, area: params[:area], country: params[:country], city: params[:city]} do |q|%>
         <div>
             <%= q.label :title, "タイトル:" %><br>
-            <%= q.text_field :title, :size=>"100%" %>
+            <%= q.text_field :title, :class=>"form-control" %>
         </div>
         <div>
             <%= q.label :detail, "詳細:" %><br>
-            <%= q.text_area :detail, :size=>"100%x10%" %>
+            <%= q.text_area :detail, :class=>"form-control" %>
         </div>
         <div>
-            <%= q.submit "送信" %>
+            <%= q.submit "送信", :class=>"btn btn-primary question-button" %>
         </div>
 
     <% end%>

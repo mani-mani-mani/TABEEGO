@@ -1,37 +1,45 @@
+<div class = "container">
+<br>
+<legend>掲示板詳細</legend>
 <!-- 質問内容 -->
-<div style="border:solid 10px;margin:20px">
-    <div></div>
-    <div>
-        <p><%= @question.title%></p>
-        <p><%= @question.detail%></p>
-    </div>
+<div class="card board-card">
+  <h5 class="card-header"><%= @question.title%></h5>
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <p class="card-text"><%= @question.detail%></p>
+  </div>
 </div>
 
 <!-- コメント一覧 -->
+
+
 <% @comments.each do |c|%>
-<div style="border:solid 1px;margin:20px">
-    <div>
-        <p><%= c.title %></p>
-        <p><%= c.detail %></p>
+<div class="card comment-card">
+    <div class="card-body">
+        <h5 class="card-title"><%= c.title %></h5>
+        <p class="card-text"><%= c.detail %></p>
     </div>
 </div>
 <% end %>
 
 <!-- コメント追加-->
-<div style="border:double 10px;margin:20px;">
+<div class = "card card-body comment-card">
+    <legend>コメントを送信</legend>
     <%= form_for @add, :method => :post, :url => {controller: :comments, action: :create} do |c| %>
     <div>
         <%= c.label :title, "タイトル:" %></br>
-        <%= c.text_field :title, :size=>"150" %>
+        <%= c.text_field :title, :class=>"form-control" %>
     </div>
     <div>
         <%= c.label :detail, "詳細:" %></br>
-        <%= c.text_area :detail,  :size=>"150x10" %>
+        <%= c.text_area :detail,  :class=>"form-control" %>
     </div>
         <%= c.hidden_field :user_id, :value => 2 %>
         <%= c.hidden_field :question_id, :value => 1 %>
     <div>
-        <%= c.submit "送信" %>
+        <%= c.submit "送信", :class=>"btn btn-primary comment-button" %>
     </div>
     <% end %>
+</div>
+
 </div>
