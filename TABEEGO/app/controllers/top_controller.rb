@@ -3,6 +3,11 @@ class TopController < ApplicationController
     def index
     end
 
+    def profile
+        user_id = session[:user_id]
+        @user = User.find_by(id: user_id)
+    end
+
     def admin
         @users = User.all
     end

@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get "/", to: "top#index"
   # get "/admin", to: "top#admin"
 
+  get "/profile", to: "top#profile"
+
   get "/login", to: "top#login"
   post "/login", to: "top#login_check"
   get "/logout", to: "top#logout"

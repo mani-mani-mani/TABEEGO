@@ -1,7 +1,9 @@
 <div class = "container">
 <legend>プロフィール画面</legend>
 <% if logged_in? %>
-<p>ユーザー名: </p>
+<p>ユーザー名: <%= @user.name %></p>
+<% string = @user.password  %>
+<p>パスワード: <%= string %></p>
 <% else %>
 <p>ログインしてください。</p>
 <% end %>
