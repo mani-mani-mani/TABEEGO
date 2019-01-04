@@ -3,9 +3,9 @@
     <p><a href="/area/"><%= params[:country]%></a> > <%= params[:city]%></p>
     <h2>掲示板一覧</h2>
     <% @questions.each do |q| %>
-        <div style = "padding: 10px;" class = "question">
+        <div  class = "question card">
             <p><%= q.username %>の質問 最新更新: <%= q.updated_at%></p>
-            <h2><%= link_to q.title, {controller: :questions, action: :detail, area: params[:area], country: params[:country], city: params[:city], question_id: q.id} %></h2>
+            <h3><%= link_to q.title, {controller: :questions, action: :detail, area: params[:area], country: params[:country], city: params[:city], question_id: q.id} %></h3>
             <span><%= link_to q.detail, {controller: :questions, action: :detail, area: params[:area], country: params[:country], city: params[:city], question_id: q.id} %>
             <br><%= link_to "詳細", {controller: :questions, action: :detail, area: params[:area], country: params[:country], city: params[:city], question_id: q.id} %></span> 
         </div>

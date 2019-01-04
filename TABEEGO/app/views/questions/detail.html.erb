@@ -1,13 +1,14 @@
 <div class = "container">
 <br>
 <legend>掲示板詳細</legend>
+<p>最新更新: <%= @question.updated_at%></p>
 <!-- 質問内容 -->
 <div class="card board-card">
-  <h5 class="card-header"><%= @question.title%></h5>
-  <div class="card-body">
-    <h5 class="card-title"></h5>
-    <p class="card-text"><%= @question.detail%></p>
-  </div>
+    <h5 class="card-header"><%= @question.title%></h5>
+    <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text"><%= @question.detail%></p>
+    </div>
 </div>
 
 <!-- コメント一覧 -->
@@ -16,7 +17,7 @@
 <% @comments.each do |c|%>
 <div class="card comment-card">
     <div class="card-body">
-        <p>投稿者：<%= c.username %></p>
+        <p>投稿者：<%= c.username %>, 日時: <%= c.created_at %></p>
         <h5 class="card-title"><%= c.title %></h5>
         <p class="card-text"><%= c.detail %></p>
     </div>
