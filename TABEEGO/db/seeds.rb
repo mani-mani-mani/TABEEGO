@@ -8,17 +8,17 @@
 
 require "csv"
 
-# Areaデータの読み込み
-CSV.foreach('db/area.csv') do |row|
-    Area.create(:name => row[0], :name_jp => row[1])
-end
+# # Area更新データの読み込み
+# CSV.foreach('db/area_update.csv') do |row|
+#     Area.create(:name => row[0], :name_jp => row[1])
+# end
 
-# Countryデータの読み込み
-CSV.foreach('db/country.csv') do |row|
-  Country.create(:name => row[0], :name_jp => row[1], :area_id => row[2])
-end
+# # Country更新データの読み込み
+# CSV.foreach('db/country_update.csv') do |row|
+#   Country.create(:name => row[0], :name_jp => row[1], :area_id => row[2])
+# end
 
-# Cityデータの読み込み
-CSV.foreach('db/city.csv') do |row|
-    City.create(:name => row[0], :name_jp => row[1], :country_id => row[2])
-  end
+# # City更新データの読み込み
+# CSV.foreach('db/city_update.csv') do |row|
+#     City.create(:name => row[0], :name_jp => row[1], :country_id => row[2])
+#   end
