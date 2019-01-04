@@ -189,6 +189,10 @@ text-align: center;
 padding: 30px 0px;
 }
 
+#WorldMap {
+    padding: 30px 0px 0px 0px;
+}
+
 #WorldMap img {
     display: block;
     margin: 0 auto;
