@@ -7,17 +7,16 @@
         <% map.each_slice(4).to_a.each do |arr|%>
             <div class = "card-deck country-card-deck">
                 <% arr.each do |country, city|%>
-                    <% city.each do |city| %>
                     <div class="card country-card" style="width: 30%;">
                     <%= image_tag("/area/#{area}/#{country}.png", :width => "100%", :class => "card-img-top", :alt => "カード画像") %>
                         
                         <div class="card-body">
                             <h4 class="card-title"><%= @japanize[country] %></h4>
-                            <p class="card-text"></p>
-                            <%= link_to @japanize[city], {controller: :questions, area: area, country: country, city: city}%>
+                            <% city.each do |city| %>
+                                <p>・<%= link_to @japanize[city], {controller: :questions, area: area, country: country, city: city}%></p>
+                            <% end %>
                         </div>
                     </div>
-                    <% end %>
                 <% end %>
         </div>
         <% end %>
