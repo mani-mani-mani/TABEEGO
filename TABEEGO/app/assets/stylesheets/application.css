@@ -176,6 +176,7 @@ footer .container-fluid p {
     right: 10%;
     border: solid 1px #000000;
     font-size: 8vw;
+    padding: 0px 25px;
 }
 
 .slogan p{
