@@ -162,6 +162,10 @@ footer .container-fluid p {
 }
 
 /* index */
+.alert {
+    margin-bottom: 0;
+}
+
 .img-text {
     position:relative;
 }
