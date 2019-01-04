@@ -16,6 +16,7 @@
 <% @comments.each do |c|%>
 <div class="card comment-card">
     <div class="card-body">
+        <p>投稿者：<%= c.username %></p>
         <h5 class="card-title"><%= c.title %></h5>
         <p class="card-text"><%= c.detail %></p>
     </div>
@@ -23,6 +24,7 @@
 <% end %>
 
 <!-- コメント追加-->
+<% if logged_in? %>
 <div class = "card card-body comment-card">
     <legend>コメントを送信</legend>
     <%= form_for @add, :method => :post, :url => {controller: :comments, action: :create} do |c| %>
@@ -34,12 +36,14 @@
         <%= c.label :detail, "詳細:" %></br>
         <%= c.text_area :detail,  :class=>"form-control" %>
     </div>
-        <%= c.hidden_field :user_id, :value => 2 %>
-        <%= c.hidden_field :question_id, :value => 1 %>
     <div>
         <%= c.submit "送信", :class=>"btn btn-primary comment-button" %>
     </div>
     <% end %>
 </div>
-
+<% else %>
+<div>
+    投稿をするにはログインする必要があります。
+    <%= link_to "ログイン", "/login" %>
 </div>
+<% end %>

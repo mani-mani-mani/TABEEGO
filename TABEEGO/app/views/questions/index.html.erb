@@ -4,13 +4,15 @@
     <h2>掲示板一覧</h2>
     <% @questions.each do |q| %>
         <div style = "padding: 10px;" class = "question">
-            <p>投稿: <%= q.created_at%></p>
+            <p><%= q.username %>の質問</p>
             <h2><%= link_to q.title, {controller: :questions, action: :detail, area: params[:area], country: params[:country], city: params[:city], question_id: q.id} %></h2>
             <span><%= link_to q.detail, {controller: :questions, action: :detail, area: params[:area], country: params[:country], city: params[:city], question_id: q.id} %>
+            <p>最新更新: <%= q.updated_at%></p>
             <br><%= link_to "詳細", {controller: :questions, action: :detail, area: params[:area], country: params[:country], city: params[:city], question_id: q.id} %></span>        
         </div>
     <% end %>
 
+<% if logged_in? %>
 <div class="card card-body question-card">
     <legend>掲示板を作成</legend>
     <%= form_for @add, :method => :post, :url => {controller: :questions, action: :create, area: params[:area], country: params[:country], city: params[:city]} do |q|%>
@@ -26,6 +28,12 @@
             <%= q.submit "送信", :class=>"btn btn-primary question-button" %>
         </div>
 
-    <% end%>
-</div>
+        <% end%>
+    </div>
+<% else %>
+    <div>
+        投稿をするにはログインする必要があります。
+        <%= link_to "ログイン", "/login" %>
+    </div>
+<% end %>
 </div>
