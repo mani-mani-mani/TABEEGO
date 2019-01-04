@@ -1,6 +1,6 @@
 <div class = "container">
     <br>
-    <p><%= params[:country]%> > <%= params[:city]%></p>
+    <p><a href="/area/"><%= params[:country]%></a> > <%= params[:city]%></p>
     <h2>掲示板一覧</h2>
     <% @questions.each do |q| %>
         <div style = "padding: 10px;" class = "question">
