@@ -11,6 +11,7 @@
 <% @comments.each do |c|%>
 <div style="border:solid 1px;margin:20px">
     <div>
+        <p>投稿者：<%= c.username %></p>
         <p><%= c.title %></p>
         <p><%= c.detail %></p>
     </div>
@@ -18,6 +19,7 @@
 <% end %>
 
 <!-- コメント追加-->
+<% if logged_in? %>
 <div style="border:double 10px;margin:20px;">
     <%= form_for @add, :method => :post, :url => {controller: :comments, action: :create} do |c| %>
     <div>
@@ -28,10 +30,14 @@
         <%= c.label :detail, "詳細:" %></br>
         <%= c.text_area :detail,  :size=>"150x10" %>
     </div>
-        <%= c.hidden_field :user_id, :value => 2 %>
-        <%= c.hidden_field :question_id, :value => 1 %>
     <div>
         <%= c.submit "送信" %>
     </div>
     <% end %>
 </div>
+<% else %>
+<div>
+    投稿をするにはログインする必要があります。
+    <%= link_to "ログイン", "/login" %>
+</div>
+<% end %>

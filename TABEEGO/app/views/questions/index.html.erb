@@ -4,27 +4,34 @@
     <h2>掲示板一覧</h2>
     <% @questions.each do |q| %>
         <div style = "padding: 10px;" class = "question">
-            <p>投稿: <%= q.created_at%></p>
+            <p>投稿: <%= q.created_at%> by <%= q.username %></p>
             <h2><%= link_to q.title, {controller: :questions, action: :detail, area: params[:area], country: params[:country], city: params[:city], question_id: q.id} %></h2>
             <span><%= link_to q.detail, {controller: :questions, action: :detail, area: params[:area], country: params[:country], city: params[:city], question_id: q.id} %>
             <br><%= link_to "詳細", {controller: :questions, action: :detail, area: params[:area], country: params[:country], city: params[:city], question_id: q.id} %></span>        
         </div>
     <% end %>
 
-<div style="border:double 10px;margin-bottom:20px;">
-    <%= form_for @add, :method => :post, :url => {controller: :questions, action: :create, area: params[:area], country: params[:country], city: params[:city]} do |q|%>
-        <div>
-            <%= q.label :title, "タイトル:" %><br>
-            <%= q.text_field :title, :size=>"100%" %>
-        </div>
-        <div>
-            <%= q.label :detail, "詳細:" %><br>
-            <%= q.text_area :detail, :size=>"100%x10%" %>
-        </div>
-        <div>
-            <%= q.submit "送信" %>
-        </div>
+<% if logged_in? %>
+    <div style="border:double 10px;margin-bottom:20px;">
+        <%= form_for @add, :method => :post, :url => {controller: :questions, action: :create, area: params[:area], country: params[:country], city: params[:city]} do |q|%>
+            <div>
+                <%= q.label :title, "タイトル:" %><br>
+                <%= q.text_field :title, :size=>"100%" %>
+            </div>
+            <div>
+                <%= q.label :detail, "詳細:" %><br>
+                <%= q.text_area :detail, :size=>"100%x10%" %>
+            </div>
+            <div>
+                <%= q.submit "送信" %>
+            </div>
 
-    <% end%>
-</div>
+        <% end%>
+    </div>
+<% else %>
+    <div>
+        投稿をするにはログインする必要があります。
+        <%= link_to "ログイン", "/login" %>
+    </div>
+<% end %>
 </div>
