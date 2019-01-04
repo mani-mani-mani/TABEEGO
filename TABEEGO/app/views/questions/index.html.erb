@@ -11,28 +11,27 @@
         </div>
     <% end %>
 
-<% if logged_in? %>
-<div class="card card-body question-card">
-    <legend>掲示板を作成</legend>
-    <%= form_for @add, :method => :post, :url => {controller: :questions, action: :create, area: params[:area], country: params[:country], city: params[:city]} do |q|%>
-        <div>
-            <%= q.label :title, "タイトル:" %><br>
-            <%= q.text_field :title, :class=>"form-control" %>
-        </div>
-        <div>
-            <%= q.label :detail, "詳細:" %><br>
-            <%= q.text_area :detail, :class=>"form-control" %>
-        </div>
-        <div>
-            <%= q.submit "送信", :class=>"btn btn-primary question-button" %>
-        </div>
+    <div class="card card-body question-card">
+    <% if logged_in? %>
+        <legend>掲示板を作成</legend>
+        <%= form_for @add, :method => :post, :url => {controller: :questions, action: :create, area: params[:area], country: params[:country], city: params[:city]} do |q|%>
+            <div>
+                <%= q.label :title, "タイトル:" %><br>
+                <%= q.text_field :title, :class=>"form-control" %>
+            </div>
+            <div>
+                <%= q.label :detail, "詳細:" %><br>
+                <%= q.text_area :detail, :class=>"form-control" %>
+            </div>
+            <div>
+                <%= q.submit "送信", :class=>"btn btn-primary question-button" %>
+            </div>
 
-        <% end%>
+            <% end%>
+    <% else %>
+            掲示板を作成するにはログインする必要があります。
+            <%= link_to "ログイン", "/login" %>
+    <% end %>
+
     </div>
-<% else %>
-    <div>
-        投稿をするにはログインする必要があります。
-        <%= link_to "ログイン", "/login" %>
-    </div>
-<% end %>
 </div>

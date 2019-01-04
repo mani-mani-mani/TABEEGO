@@ -24,8 +24,8 @@
 <% end %>
 
 <!-- コメント追加-->
-<% if logged_in? %>
 <div class = "card card-body comment-card">
+<% if logged_in? %>
     <legend>コメントを送信</legend>
     <%= form_for @add, :method => :post, :url => {controller: :comments, action: :create} do |c| %>
     <div>
@@ -40,10 +40,8 @@
         <%= c.submit "送信", :class=>"btn btn-primary comment-button" %>
     </div>
     <% end %>
-</div>
 <% else %>
-<div>
     投稿をするにはログインする必要があります。
     <%= link_to "ログイン", "/login" %>
-</div>
 <% end %>
+</div>
