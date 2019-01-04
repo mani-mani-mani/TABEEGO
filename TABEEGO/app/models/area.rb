@@ -2,11 +2,11 @@ class Area < ApplicationRecord
     has_many :countries
 
     def self.city
-        result = Hash.new{|h,k| h[k] = {}}
+        result = Hash.new{|h,k| h[k] = Hash.new{|h,k| h[k] = []}}
         data = Area.joins(:countries => :cities).select("areas.name AS area, countries.name AS country, cities.name AS city")
 
         data.each do |data|
-            result[data.area][data.country] = data.city
+            result[data.area][data.country].push(data.city)
         end
         return result
     end
